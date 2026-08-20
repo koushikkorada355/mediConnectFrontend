@@ -1,0 +1,199 @@
+/* ========== Features Section ========== */
+.features-section {
+  padding: 100px 24px;
+  background: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========== Header ========== */
+.features-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.features-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0066CC;
+  background: rgba(0, 102, 204, 0.08);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.features-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.features-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ========== Grid ========== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ========== Card ========== */
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+/* ========== Icon ========== */
+.feature-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* ========== Text ========== */
+.feature-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ========== Link ========== */
+.feature-link {
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== Hover Border ========== */
+.feature-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.feature-card:hover .feature-border {
+  opacity: 1;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+  .features-section {
+    padding: 80px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .features-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features-section {
+    padding: 60px 16px;
+  }
+
+  .features-header {
+    margin-bottom: 40px;
+  }
+
+  .features-title {
+    font-size: 24px;
+  }
+
+  .features-subtitle {
+    font-size: 14px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 24px 20px;
+  }
+
+  .feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .feature-icon {
+    font-size: 20px;
+  }
+
+  .feature-card-title {
+    font-size: 15px;
+  }
+
+  .feature-desc {
+    font-size: 12px;
+  }
+}

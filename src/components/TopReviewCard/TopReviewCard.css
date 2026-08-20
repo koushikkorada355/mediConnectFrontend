@@ -1,0 +1,237 @@
+/* ============ TOP REVIEW CARD ============ */
+
+.trc {
+  position: relative;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0d9488, #14b8a6, #f59e0b);
+  opacity: 1;
+}
+
+/* Top Badge */
+.trc__badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #fef08a, #fcd34d);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c2d12;
+  margin-bottom: 14px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
+}
+
+/* Quote Icon */
+.trc__quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  color: #e5e7eb;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.trc:hover .trc__quote-icon {
+  color: #14b8a6;
+  opacity: 0.25;
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Rating Pill */
+.trc__rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.trc__rating-label {
+  font-size: 11px;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+/* Title */
+.trc__title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+  padding-right: 40px;
+  letter-spacing: -0.01em;
+}
+
+/* Description */
+.trc__description {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 14px 0;
+}
+
+/* Visit Reason */
+.trc__visit-reason {
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-left: 3px solid #0d9488;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Footer */
+.trc__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid #f3f4f6;
+}
+
+/* User Info */
+.trc__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trc__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.trc__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trc__user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trc__verified-icon {
+  width: 14px;
+  height: 14px;
+  color: #059669;
+  background: #d1fae5;
+  border-radius: 50%;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.trc__date {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Stars */
+.trc__stars {
+  display: flex;
+  gap: 2px;
+}
+
+.trc-star { transition: color 0.2s ease; }
+.trc-star--filled { color: #f59e0b; }
+.trc-star--empty { color: #d1d5db; }
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 768px) {
+  .trc {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .trc__title {
+    font-size: 15px;
+    padding-right: 30px;
+  }
+
+  .trc__description {
+    font-size: 13px;
+  }
+
+  .trc__quote-icon {
+    right: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .trc {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .trc__badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .trc__title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .trc__description {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .trc__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .trc__avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .trc__user-name {
+    font-size: 12px;
+  }
+
+  .trc__date {
+    font-size: 10px;
+  }
+}

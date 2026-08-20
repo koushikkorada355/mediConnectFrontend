@@ -1,0 +1,107 @@
+/* Reusing standard dashboard layout styles, but with Hospital Admin specific themes */
+@import '../SystemAdminDashboard/SystemAdminDashboard.css';
+
+:root {
+  /* Customize theme for hospital dashboard if needed */
+  --hospital-primary: #0ea5e9; /* Light blue theme */
+  --hospital-hover: #0284c7;
+}
+
+.dashboard-sidebar.hospital-theme .nav-item.active {
+  background: var(--hospital-primary);
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
+}
+
+.brand-badge.hospital {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--hospital-primary);
+}
+
+.hospital-avatar {
+  background: var(--hospital-primary);
+}
+
+/* Typography Helpers */
+.text-green { color: var(--secondary-color); }
+.text-orange { color: var(--warning-color); }
+.text-red { color: var(--danger-color); }
+
+/* Bed Management Specific */
+.bed-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.bed-card {
+  background: var(--surface-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--border-color);
+  transition: transform var(--transition-normal);
+}
+
+.bed-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.bed-card.general { border-left-color: var(--secondary-color); }
+.bed-card.icu { border-left-color: var(--warning-color); }
+.bed-card.ccu { border-left-color: var(--danger-color); }
+
+.bed-card h4 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.bed-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn-secondary {
+  background: var(--background-color);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background: var(--border-color);
+}
+
+/* Forms layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.settings-section {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.settings-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.mt-6 { margin-top: 1.5rem; }
